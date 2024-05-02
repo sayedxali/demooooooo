@@ -42,7 +42,7 @@ public class TestController2IT {
     public void helloTest() throws Exception {
         MvcResult mvcResult = this.mockMvc.perform(
                         MockMvcRequestBuilders.get("")
-                                .with(jwt().authorities(new SimpleGrantedAuthority("rolesomehting")))
+                                .with(jwt().authorities(new SimpleGrantedAuthority("board_manager")))
                                 .contentType(MediaType.APPLICATION_JSON)
                 )
                 .andExpect(MockMvcResultMatchers.status().isOk())
